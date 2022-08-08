@@ -10,7 +10,6 @@ form.addEventListener('submit', (e)=>{
         const errorMsg = document.querySelector('.error_msg')
         errorMsg.innerText = 'Succesfuly submitted a valid Email'
         errorMsg.style.color = 'green'
-        form.classList.add('success')
     }
 })
 
