@@ -115,6 +115,9 @@ button:hover{
 .error .error_msg{
     display: block;
 }
+.success .error_img{
+    display: none;
+}
 .apparel_display{
     width: 40%;
     background-image: url("../images/hero-desktop.jpg");
