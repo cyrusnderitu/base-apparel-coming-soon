@@ -1,0 +1,197 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;500;600&display=swap');
+:root{
+    --primary-color: hsl(0, 93%, 68%);
+    --primary-color-alt: hsl(0, 36%, 70%);
+    --secondary-color: hsl(0, 6%, 24%);
+    --linear-primary: linear-gradient(135deg,  hsl(0, 80%, 86%),  hsl(0, 74%, 74%));
+    --neutral-color: linear-gradient(135deg, hsl(0, 0%, 100%), hsl(0, 100%, 98%));
+
+    --font-family: 'Josefin Sans', sans-serif;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background: var(--neutral-color);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    row-gap: 1rem;
+    font-family: var(--font-family);
+}
+h1{
+    font-size: 3rem;
+    text-transform: uppercase;
+    letter-spacing: 10px;
+}
+p{
+    color: var(--primary-color-alt);
+}
+h1 span{
+    color: var(--primary-color-alt);
+}
+form{
+    position: relative;
+    margin-top: 1.75rem;
+}
+input{
+    width: 100%;
+    height: 40px;
+    border: 1px solid var(--primary-color-alt);
+    margin-bottom: .75rem;
+    border-radius: 3rem;
+    background: transparent;
+    outline: none;
+    font-family: inherit;
+    text-indent: 2rem;
+}
+button{
+    background-image: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+    width: 70px;
+    height: 40px;
+    border: none;
+    outline: none;
+    border-radius: 3rem;
+    position: absolute;
+    top: 0;
+    right: 0;
+    transition: .4s ease-in;
+    cursor: pointer;
+}
+button:hover{
+    opacity: .6;
+}
+.container{
+    width: 100%;
+    max-width: 90%;
+    height: 580px;
+    box-shadow: 2px 5px 10px var(--secondary-color);
+}
+.apparel_desc, form{
+    width: 90%;
+}
+.apparel_cont{
+    display: flex;
+    height: 100%;
+}
+.apparel_content{
+    width: 60%;
+    height: 100%;
+    background-image: url(../images/bg-pattern-desktop.svg);
+    background-position: center center;
+    padding: 0 100px;
+}
+.logo_img{
+    margin-top: 3rem;
+}
+.mobile_img{
+    display: none;
+}
+.apparel_title{
+    margin: 5rem 0 1.5rem;
+}
+.apparel_btn{
+    box-shadow: 2px 2px 5px hsla(0, 6%, 24%, .5);
+}
+.error_img{
+    position: absolute;
+    top: 10px;
+    right: 80px;
+    height: 20px;
+    display: none;
+}
+.error_msg{
+    color: var(--primary-color);
+    margin-left: 2rem;
+    font-size: 14px;
+    font-weight: 400;
+    display: none;
+}
+.error .error_img,
+.error .error_msg{
+    display: block;
+}
+.apparel_display{
+    width: 40%;
+    background-image: url("../images/hero-desktop.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+
+@media screen and (max-width: 825px) {
+    .logo_img{
+        width: 50%;
+    }
+    h1{
+        font-size: 2.5rem;
+        text-transform: uppercase;
+        letter-spacing: 10px;
+    }
+    .apparel_content{
+        padding: 0 50px;
+    }
+}
+@media screen and (max-width: 600px) {
+    .container{
+        width: 100%;
+        max-width: 90%;
+        height: max-content;
+        box-shadow: 2px 5px 10px var(--secondary-color);
+    }
+    .apparel_content{
+        width: 100%;
+        height: fit-content;
+        background-color: var(--neutral-color);
+        padding: 0 15px 50px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .logo_img{
+        width: 40%;
+        margin-bottom: .913rem;
+        align-self: flex-start;
+    }
+    h1{
+        font-size: 2.5rem;
+        text-transform: uppercase;
+        letter-spacing: 10px;
+        text-align: center;
+    }
+    h1 span{
+        color: var(--primary-color-alt);
+        font-weight: 300;
+    }
+    p{
+        font-size: 15px;
+        text-align: center;
+        line-height: 1.5;
+    }
+    #apparel_email{
+        text-indent: 1rem;
+        color: var(--primary-color-alt);
+    }
+    .apparel_btn{
+        width: 60px;
+    }
+    .apparel_display{
+        display: none;
+    }
+    .mobile_img{
+        display: block;
+        width: calc(100% + 30px);
+        object-fit: cover;
+        margin-left: -25px;
+        margin-right: -25px;
+        margin-bottom: -25px;
+    }
+}
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
