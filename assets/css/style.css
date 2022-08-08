@@ -145,6 +145,7 @@ button:hover{
         max-width: 90%;
         height: max-content;
         box-shadow: 2px 5px 10px var(--secondary-color);
+        border-radius: .5rem;
     }
     .apparel_content{
         width: 100%;
